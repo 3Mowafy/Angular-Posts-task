@@ -6,9 +6,8 @@ WebSite For Posts User Can Use Many Opreations as Add Post, Update Post, Delete 
 ![smartmockups_lk4z3m83](https://github.com/3Mowafy/Angular-Posts-task/assets/98129284/5faed304-1d5b-49f6-8aec-6e8a6577e816)
 
 ## Links
-Live Demo: [Click Here](https://angular-posts-woad.vercel.app/)
-
-Project Files: [Go To Top](https://github.com/3Mowafy/Angular-Posts-task)
+Live Demo: [Click Here](https://angular-posts-woad.vercel.app/)<br>
+Project Files: [Click Here](https://github.com/3Mowafy/Angular-Posts-task)
 
 ## Dependencies
 
