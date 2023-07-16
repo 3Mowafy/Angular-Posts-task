@@ -1,0 +1,13 @@
+.card-custom {
+  width: 85%;
+
+  .post-img {
+    width: 200px !important;
+    height: 200px !important;
+    object-fit: contain;
+  }
+
+  .card-content {
+    line-height: 1.6;
+  }
+}

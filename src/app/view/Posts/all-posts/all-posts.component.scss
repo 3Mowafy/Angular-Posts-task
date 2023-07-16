@@ -1,0 +1,22 @@
+.scroll-posts {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: calc(100vh - 250px);
+}
+
+.card-custom {
+  overflow: hidden;
+
+  .post-img {
+    width: 75px !important;
+    height: 75px !important;
+    object-fit: contain;
+  }
+
+  .card-content {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    cursor: pointer;
+  }
+}

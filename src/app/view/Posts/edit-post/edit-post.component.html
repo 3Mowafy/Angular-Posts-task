@@ -1,0 +1,62 @@
+<div class="modal-header py-1">
+  <h4 class="modal-title">Edit Post</h4>
+  <button
+    type="button"
+    class="btn-close"
+    aria-describedby="modal-title"
+    (click)="modal.dismiss()"
+  ></button>
+</div>
+<div class="modal-body">
+  <form [formGroup]="postForm">
+    <input type="text" formControlName="id" hidden />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter your post title"
+      formControlName="post_title"
+    />
+    <span
+      class="text-danger d-block fw-bold text-validation"
+      *ngIf="postFormValidation['post_title']?.errors?.['minlength']"
+      >Min Character of Post Title is (3) char</span
+    >
+    <textarea
+      class="form-control mt-3 post-content"
+      placeholder="Enter your post content"
+      formControlName="post_message"
+    ></textarea>
+    <span
+      class="text-danger d-block fw-bold text-validation"
+      *ngIf="postFormValidation['post_message']?.errors?.['minlength']"
+      >Min Character of Post Title is (3) char</span
+    >
+
+    <input type="file" (change)="editPostPhoto($event)" id="post-img" hidden />
+  </form>
+</div>
+<div class="modal-footer justify-content-between">
+  <button
+    type="button"
+    class="btn btn-outline-secondary"
+    (click)="modal.dismiss()"
+  >
+    Cancel
+  </button>
+
+  <label for="post-img" title="Click To Add Photo" class="text-center">
+    <i class="fa-regular fa-file-image fa-2x me-1"></i>
+    <span>{{
+      postForm.value.post_image.name ? "&#128525;" : "&#129300;"
+    }}</span>
+  </label>
+
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="modal.close('edit'); editPost()"
+    [disabled]="postForm.invalid"
+  >
+    Edit Post
+  </button>
+</div>

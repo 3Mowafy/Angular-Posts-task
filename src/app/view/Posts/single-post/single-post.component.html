@@ -1,0 +1,46 @@
+<section class="container">
+  <div
+    class="card card-custom position-relative mt-5 mx-auto"
+    *ngIf="isShow; else loader"
+  >
+    <div class="row p-3">
+      <div
+        class="col-12 col-lg-4 d-flex justify-content-center align-items-center"
+      >
+        <img
+          [src]="post?.post_image"
+          (error)="errorHandler($event)"
+          class="rounded shadow-sm border post-img"
+          alt="post_image"
+        />
+      </div>
+      <div class="col-12 col-lg-8">
+        <h5
+          class="card-title d-flex justify-content-center align-items-center text-center mt-4"
+        >
+          {{ post?.post_title }}
+        </h5>
+      </div>
+    </div>
+    <div class="card-body py-0 shadow-lg">
+      <p class="card-content py-1 w-75 mx-auto text-center mt-4">
+        {{ post?.post_message }}
+      </p>
+    </div>
+    <div class="text-center">
+      <a routerLink="/" class="btn bg-primary-subtle my-3 fw-bold"
+        ><i class="fa-solid fa-left-long"></i> Back</a
+      >
+    </div>
+  </div>
+
+  <ng-template #loader>
+    <div class="text-center my-5">
+      <img
+        src="assets/soon/giphy.gif"
+        class="rounded-circle"
+        alt="Route Failed"
+      />
+    </div>
+  </ng-template>
+</section>
