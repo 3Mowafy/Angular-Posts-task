@@ -18,7 +18,7 @@ Project Files: [Click Here](https://github.com/3Mowafy/Angular-Posts-task)
 | bootstrap | `5.2.3` |
 | ngx-skeleton-loader | `6.0.0` |
 | ngx-toastr | `16.2.0` |
-| fontawesome | `^6.4.0` |
+| fontawesome | `6.4.0` |
 
 ## Author
 - [@Mohamed Mowafy](https://github.com/3Mowafy)
